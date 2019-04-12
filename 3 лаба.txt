@@ -1,0 +1,44 @@
+//Логические операторы C# Оператор 	Значение
+            // & 	И
+            // | 	ИЛИ
+            // ^ 	Исключающее ИЛИ
+            //  && 	Укороченное И
+            // || 	Укороченное ИЛИ
+            // ! 	НЕ
+
+
+
+
+            //double vrema_har, vrema_menuta, vrema_sekunda;
+            //Console.WriteLine("1. Марафонец прошел S километров со скоростью V метров в секунду (расстояние и скорость вводятся с клавиатуры). Определить, сколько времени он был в пути (часов, минут, секунд)? " );
+            // Console.WriteLine("Введите растояния метрах" );
+            // double rastoania = double.Parse(Console.ReadLine());
+            // Console.WriteLine("В ведите скорость");
+            // double skorost = double.Parse(Console.ReadLine());
+            // vrema_sekunda = rastoania / skorost;
+            // vrema_menuta = vrema_sekunda * 60;
+            // vrema_har = vrema_sekunda * 3600;
+
+
+            // Console.WriteLine("В секундах он шел= " + vrema_sekunda + "В минутах он шел= " + vrema_menuta + "В часах он шел= " + vrema_har);
+
+            // Console.WriteLine("");
+            // Console.WriteLine("");
+            // Double Pervoe_v, vtoroe_v;
+            // Console.WriteLine("2. Пользователь вводит с клавиатуры два дробных числа.  Вывести на экран сумму целых частей и сумму дробных.");
+            // Console.WriteLine("Введите первое число");
+            //  double Pervoe = double.Parse(Console.ReadLine());
+            // Console.WriteLine("Введите второе число");
+            // double vtoroe = double.Parse(Console.ReadLine());
+            // Pervoe_v = Pervoe % 1;
+            // vtoroe_v = vtoroe % 1;
+            // Pervoe=Pervoe-Pervoe_v;
+            // vtoroe = vtoroe -vtoroe_v;
+            // Pervoe = Pervoe + vtoroe;
+            // Pervoe_v = Pervoe_v + vtoroe_v;
+
+            // Console.WriteLine("Сумма целых частей " +  Pervoe+  " Сумма дробных частей"+Pervoe_v);
+            // Console.WriteLine("");
+            // Console.WriteLine("");
+
+            // Console.WriteLine("3. Пользователь вводит с клавиатуры сумму в рубях (дробное число). Вывести по отдельности количество рублей и количество копеек (например, ввести 45.67 рублей - получить и вывести 45 рублей 67 копеек)");

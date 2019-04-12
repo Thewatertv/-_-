@@ -1,0 +1,308 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, vtoroe1, vtoroe2, vtoroe3, Summ, raznoc, heture1, heture2, heture3, heture4, trex1, trex2, trex3, i;
+            double y, x, funt;
+
+
+            Console.WriteLine("Поменять середины у чисел");
+
+            Console.WriteLine("Введите первое число (трех значное) ");
+            int d = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число (трех значное) ");
+            int vtoroe = int.Parse(Console.ReadLine());
+
+            b = d % 100;
+            a = (d - b) / 100;
+            c = b % 10;
+            b = (b - c) / 10;
+
+            vtoroe2 = vtoroe % 100;
+            vtoroe1 = (vtoroe - vtoroe2) / 100;
+            vtoroe3 = vtoroe2 % 10;
+            vtoroe2 = (vtoroe2 - vtoroe3) / 10;
+
+
+
+            Console.WriteLine("Первое число= " + a + vtoroe2 + c + "Второе число=  " + vtoroe1 + b + vtoroe3);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("2. Ввести 4-значное число и подсчитать сумму первой и третьей цифры и разность второй и четвертой цифры.");
+            Console.WriteLine("Введите число (четырех значное) ");
+            int heture = int.Parse(Console.ReadLine());
+
+            heture2 = heture % 1000;
+            heture1 = (heture - heture2) / 1000;
+            heture3 = heture2 % 100;
+            heture2 = (heture2 - heture3) / 100;
+            heture4 = heture3 % 10;
+            heture3 = (heture3 - heture4) / 10;
+
+            Summ = heture1 + heture3;
+            raznoc = heture2 - heture4;
+            Console.WriteLine("Сумма первой и третий цифры= " + Summ + "Разность второй и четвертой цифры= " + raznoc);
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("3. Ввести с клавиатуры 3-значное число и удалить из него среднюю цифру (например, ввести 3, 5, 7 – получить и вывести число 37).");
+            Console.WriteLine("Введите  число (трех значное) ");
+            int trex = int.Parse(Console.ReadLine());
+            trex2 = trex % 100;
+            trex1 = (trex - trex2) / 100;
+            trex3 = trex2 % 10;
+            trex2 = (trex2 - trex3) / 10;
+            Console.WriteLine("Получается число " + trex1 + trex3);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("4.Написать программу, которая предлагает пользователю ввести сумму денежного вклада в рублях, а также процент годовых, которые выплачивает банк. Определить сумму денег, выплачиваемых банком вкладчику каждый месяц.");
+
+            Console.WriteLine("Введите  сумму");
+            double sum_vklad = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите  процент ");
+            double prozent = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите на сколько лет вклад ");
+            double led = double.Parse(Console.ReadLine());
+            led = led * 12;
+            prozent = prozent / 100;
+            prozent = prozent / 12;
+
+
+
+            for (i = 1; i <= led; i++)
+            {
+                sum_vklad = sum_vklad + sum_vklad * prozent;
+                Console.WriteLine("За месяц № " + i + "Вы получите =" + sum_vklad)
+                    ;
+            }
+
+
+            Console.WriteLine("Вы получите " + sum_vklad);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("5.	Сколько товара ценой Y можно купить на Х рублей и сколько получить сдачи?");
+
+            int cdaza, kolvo_tovaray;
+            Console.WriteLine("Введите сумму");
+            int summaa = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите цену");
+            int wera = int.Parse(Console.ReadLine());
+
+            kolvo_tovaray = summaa / wera;
+            Console.WriteLine("На данную сумму можно купить товара количеством " + kolvo_tovaray);
+            cdaza = summaa - (kolvo_tovaray * wera);
+            Console.WriteLine("Ваша сдача - " + cdaza);
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+
+            Console.WriteLine("6.	Написать программу, которая переводит фунты в килограммы. Один фунт – 405.9 грамма задается в программе как константа. Затем, реализовать обратный перевод – из килограммов в фунты.");
+
+
+            Double kgvsvod;
+
+            funt = 405.9;
+
+            Console.WriteLine("Ввведите сколько килограм");
+
+            double kg = double.Parse(Console.ReadLine());
+            kg = (kg / 1000) * funt;
+            Console.WriteLine("В фунтах это =" + kg);
+            Console.WriteLine("Ввведите сколько фунтов");
+            double funtvod = double.Parse(Console.ReadLine());
+            kgvsvod = (funtvod / funt) * 1000;
+            Console.WriteLine("В килограмах  это =" + kgvsvod);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Double dlinaistem, wirnaistem, plohar;
+            Console.WriteLine("7.	Ввести длину, ширину и высоту комнаты. Подсчитать, сколько краски уйдет на покраску стен этой комнаты, если на 1м2 стены приходится N литров краски и M% поверхности стен занимают окна и двери. Также, рассчитать общую стоимость краски, с учётом того, что один литр краски стоит R рублей. ");
+            Console.WriteLine("Введите длину");
+            double dlin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите ширину");
+            double hir = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите высоту");
+            double vis = double.Parse(Console.ReadLine());
+            Console.WriteLine("Цена за литр");
+            double linr_kraska = double.Parse(Console.ReadLine());
+            Console.WriteLine("Сколько литвор уходит на 1м2 ");
+            double metr_kvadrat = double.Parse(Console.ReadLine());
+            Console.WriteLine("Сколько процентов занимают двери и окна");
+            double dveru_and_okna = double.Parse(Console.ReadLine());
+            dlinaistem = (vis * dlin) * 2;
+            wirnaistem = (vis * hir) * 2;
+            plohar = dlinaistem + wirnaistem;
+            dveru_and_okna = dveru_and_okna / 100;
+            plohar =plohar- plohar * dveru_and_okna;
+
+            metr_kvadrat = plohar / metr_kvadrat;
+            metr_kvadrat = metr_kvadrat * linr_kraska;
+            Console.WriteLine("Краска будет стоить =" + metr_kvadrat);
+
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            int perevorot1, perevorot2, perevorot3;
+            Console.WriteLine("8.	Ввести с клавиатуры 3-значное число и «перевернуть» его (например, ввести 357 – получить и вывести 753).)");
+            Console.WriteLine("Введите трех значное число");
+            int perevorot = int.Parse(Console.ReadLine());
+            perevorot2 = perevorot % 100;
+            perevorot1 = (perevorot - perevorot2) / 100;
+            perevorot3 = perevorot2 % 10;
+            perevorot2 = (perevorot2 - perevorot3) / 10;
+            Console.WriteLine("Перевернутое число =" + perevorot3 + perevorot2 + perevorot1);
+            Console.WriteLine("");
+            Console.WriteLine("");
+            
+            Console.WriteLine("9.	Ввести пятизначное число и сдвинуть его циклически вправо на N разрядов (например, ввести число 12345, и 2 разряда – получить и вывести на экран 45123).");
+            Console.WriteLine("Ввведите Пятизначное число");
+            int patiznah = int.Parse(Console.ReadLine());
+            int patiznah1, patiznah2, patiznah3, patiznah4, patiznah5;
+            patiznah2 = patiznah % 10000;
+            patiznah1 = (patiznah - patiznah2) / 10000;
+            patiznah3 = patiznah2 % 1000;
+            patiznah2 = (patiznah2 - patiznah3) / 1000;
+            patiznah4 = patiznah3 % 100;
+            patiznah3 = (patiznah3 - patiznah4) / 100;
+            patiznah5 = patiznah4 % 10;
+            patiznah4 = (patiznah4 - patiznah5) / 10;
+            Console.WriteLine("На сколько хотите сдвинуть (ввидите чисолот от 0 до 5");
+            int zdvig = int.Parse(Console.ReadLine());
+
+
+            switch (zdvig)
+            {
+                case 0:
+                    Console.WriteLine("Сдвиг на 0 " + patiznah1 + patiznah2 + patiznah3 + patiznah4 + patiznah5);
+                    break;
+                case 1:
+                    Console.WriteLine("Сдвиг на 1 " + patiznah5 + patiznah1 + patiznah2 + patiznah3 + patiznah4);
+                    break;
+                case 2:
+                    Console.WriteLine("Сдвиг на 2 " + patiznah5 + patiznah4 + patiznah1 + patiznah2 + patiznah3);
+                    break;
+                case 3:
+                    Console.WriteLine("Сдвиг на 3 " + patiznah5 + patiznah4 + patiznah3 + patiznah1 + patiznah2);
+                    break;
+                case 4:
+                    Console.WriteLine("Сдвиг на 4 " + patiznah5 + patiznah4 + patiznah3 + patiznah2 + patiznah1);
+                    break;
+                case 5:
+                    Console.WriteLine("Сдвиг на 5 " + patiznah1 + patiznah5 + patiznah4 + patiznah3 + patiznah2);
+                    break;
+
+            }
+
+            Console.ReadKey(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Double Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, planeta_crednia, planeda_massa, Mercury_prozent, Venus_prozent, Earth_prozent, Mars_prozent, Jupiter_prozent, Saturn_prozent, Uranus_prozent, Neptune_prozent2, planeda_massa1,uputer_v_massa;
+            Console.WriteLine("10.	Рассчитать общую массу всех планет Солнечной системы. Вычислить среднее арифметическое масс планет. Затем - массу каждой планеты в процентном соотношении, если принять за 100% общую массу всех планет. Во сколько раз масса самой крупной планеты больше чем сумма масс всех остальных планет? Все результаты – показать на экране. Рекомендуется использование типа BigDecimal.");
+            Console.WriteLine("Масса поланеты Меркурий =0.32868 · 10^24 Килограмм");
+            Mercury = 0.32868;
+            Console.WriteLine("Масса поланеты  Венера=4.81068 · 10^24 Килограмм");
+            Venus = 4.81068;
+            Console.WriteLine("Масса поланеты  Земля= 5.97600 · 10^24 Килограмм");
+            Earth = 5.97600;
+            Console.WriteLine("Масса поланеты Марс=0.63345 · 10^24 Килограмм");
+            Mars = 0.63345;
+            Console.WriteLine("Масса поланеты Юпитер=1876.64328 · 10^24 Килограмм");
+            Jupiter = 1876.64328;
+            Console.WriteLine("Масса поланеты Сатурн=561.80376 · 10^24 Килограмм");
+            Saturn = 561.80376;
+            Console.WriteLine("Масса поланеты Уран=86.05440 · 10^24 Килограмм");
+            Uranus = 86.05440;
+            Console.WriteLine("Масса поланеты Нептун=101.59200 · 10^24 Килограмм");
+            Neptune = 101.59200;
+
+            Console.WriteLine("");
+            planeda_massa = Mercury + Venus + Earth + Mars + Jupiter + Saturn + Uranus + Neptune;
+            planeta_crednia = planeda_massa / 8;
+            Console.WriteLine("Масса всех планет равна " + planeda_massa + "*10^24 Килограмм");
+
+            Console.WriteLine("");
+            Console.WriteLine("Среднеарифмитическая масса планет равна " + planeta_crednia + "*10^24 Килограмм");
+            Mercury_prozent = (Mercury * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Меркурий = " + Mercury_prozent + "% от общей масс всех планет");
+            Venus_prozent = (Venus * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты  Венера=" + Venus_prozent + "% от общей масс всех планет");
+            Earth_prozent = (Earth * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты  Земля= " + Earth_prozent + "% от общей масс всех планет");
+            Mars_prozent = (Mars * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Марс=" + Mars_prozent + "% от общей масс всех планет");
+            Jupiter_prozent = (Jupiter * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Юпитер=" + Jupiter_prozent + "% от общей масс всех планет");
+            Saturn_prozent = (Saturn * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Сатурн=" + Saturn_prozent + "% от общей масс всех планет");
+            Uranus_prozent = (Uranus * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Уран=" + Uranus_prozent + "% от общей масс всех планет");
+            Neptune_prozent2 = (Neptune * 100) / planeda_massa;
+
+            Console.WriteLine("");
+            Console.WriteLine("Масса поланеты Нептун=" + Neptune_prozent2 + "% от общей масс всех планет");
+
+            planeda_massa1 = Mercury + Venus + Earth + Mars +  Saturn + Uranus + Neptune;
+            uputer_v_massa = Jupiter / planeda_massa1;
+             
+            Console.WriteLine("Самая большая планета Юпитер ее масса в " + uputer_v_massa + " больше маассы суммы всех остальных планет");
+
+
+            Console.ReadKey(true);
+        }
+    }
+
+}
+
+
+
